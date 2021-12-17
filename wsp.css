@@ -1,0 +1,61 @@
+.icon-wts{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    cursor: pointer;
+}
+.icon-wts:active{
+    transform: scale(0.9);
+}
+.form-wts{
+    width: 220px;
+    height: 280px;
+    background: white;
+    position: fixed;
+    bottom: 110px;
+    right: 50px;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.22);
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+.entrarysalir{
+    display: block;
+}
+.inputwts{
+    width: 100%;
+    padding: 5px;
+    color: #666;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.19)
+}
+.inputwts:focus{
+    outline: none;
+}
+.textareawts{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 5px;
+    color: #666;
+    box-sizing: border-box;
+    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.19)
+}
+.textareawts:focus{
+    outline: none;
+}
+.btn-wts{
+    width: 100%;
+    background: #00a82d;
+    border: none;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}

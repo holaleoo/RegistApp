@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head > 
+    <title>RegistApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="wsp.css">
+</head>
+<body>
+    <header class = "headerr">
+        
+        <div class="contenedor">
+            <nav class="menu">
+                <a  href="https://campusvirtual.duoc.cl/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_36_1" target="_blank">AVA</a>
+                <a  href="https://experienciavivo.duoc.cl/alumnos" target="_blank">Vivo Duoc</a>
+                <a  href="mailto:leo.tobar@duocuc.cl" target="_blank">Contacto</a>
+            </nav>
+            <div class="logo">
+                <h1>RegistApp</h1>
+            </div>
+        </div>
+    </header>
+
+<!-- api de wts -->
+    <div>
+        <form class = "form-wts" action="" id = "form">
+            <p>¿Tienes alguna pregunta?</p>
+            <label for="">Nombre</label>
+            <input class = "inputwts" type="text" placeholder="Nombre">
+            <label for="">Mensaje</label>
+            <textarea class = "textareawts" name="" id="" cols="30" rows="10"></textarea>
+            <button id = "sendbtn" class = "btn-wts">Enviar mensaje</button>
+        </form>
+        <img class = "icon-wts" src="img/wsp.png" alt="" id = "wtsicon">
+    </div>
+    <script>
+        var btnwts = document.querySelector('#wtsicon');
+        var form = document.querySelector('#form');
+        var sendbtn = document.querySelector('#sendbtn');
+
+        btnwts.addEventListener('click',function(){
+            form.classList.toggle('entrarysalir')
+        })
+        sendbtn.addEventListener('click',enviarMensaje)
+        function enviarMensaje(){
+            var inputName = document.querySelector('.inputwts').value
+            var textareaMensaje = document.querySelector('.textareawts').value
+            let url =
+            "https://api.whatsapp.com/send?phone=56965324365&text=Nombre: %0A" + inputName + "%0A%0AMensaje: %0A" + textareaMensaje + "%0A";
+            window.open(url);
+        }
+    </script>
+
+
+    <div class = "centrado">
+        <div class = "desktop">
+            <section class ="container">
+                <h2>Contexto</h2>
+                <p>En la situacion actual de la pandemia se esta generando un pequeño gran problema, 
+                y es que no se genera la asistencia correctamente por varios motiovos. Por lo tanto 
+                se les pide a los alumnos de la institucion Duoc UC generar una aplicacion que sea 
+                capaz de registrar la asistenia correctamente mediante un codigo QR.</p>
+                <h3>Escanee el siguiente codigo QR para descargar la aplicacion.</h3>
+                <img src="img/qr.png" width="400">
+            </section>
+        </div>
+
+
+
+        <div class = "tablet">
+            <section class ="container">
+                <h2>Contexto</h2>
+                <p>En la situacion actual de la pandemia se esta generando un pequeño gran problema, 
+                y es que no se genera la asistencia correctamente por varios motiovos. Por lo tanto 
+                se les pide a los alumnos de la institucion Duoc UC generar una aplicacion que sea 
+                capaz de registrar la asistenia correctamente mediante un codigo QR.</p>
+                <h3>De click en el siguiente boton para descargar la aplicacion.</h3>
+                <a href="aplicacion/MiApp.apk" target="_blank" download="Mi app">
+                    <img src="img/descargar.png" width="400">
+                </a>
+            </section>
+        </div>
+
+
+
+        <div class = "movil">
+            <section class ="container">
+                <h2>Contexto</h2>
+                <p>En la situacion actual de la pandemia se esta generando un pequeño gran problema, 
+                y es que no se genera la asistencia correctamente por varios motiovos. Por lo tanto 
+                se les pide a los alumnos de la institucion Duoc UC generar una aplicacion que sea 
+                capaz de registrar la asistenia correctamente mediante un codigo QR.</p>
+                <h3>De click en el siguiente boton para descargar la aplicacion.</h3>
+                <a href="aplicacion/MiApp.apk" target="_blank" download="Mi app">
+                    <img src="img/descargar.png" width="400">
+                </a>
+            </section>
+        </div>
+    </div>
+
+
+    <footer> 
+        <a href="https://campusvirtual.duoc.cl/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_36_1" target="_blank">AVA</a>
+        <a href="https://experienciavivo.duoc.cl/alumnos" target="_blank">Vivo Duoc</a>
+        <a href="mailto:leo.tobar@duocuc.cl">Contacto</a>
+        <div class = "img">
+            <img src="img/img2.jpg">
+        </div>
+        <div class="imgc">
+            <img src="https://www.duoc.cl/wp-content/themes/wordpress-duoc-cl/images/acreditacion.png">
+        </div>
+
+
+    </footer>
+</body>
